@@ -1,0 +1,85 @@
+body{
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+  }
+  
+  .venuse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    width: 46px;
+    height: 46px;
+    background-color: burlywood;
+    border-radius: 50%;
+    animation: orbit-venuse 6s linear infinite;
+  }
+  
+  .mars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(100px);
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    border-radius: 50%;
+    animation: orbit-mars 4s linear infinite;
+  }
+  
+  .earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(200px);
+    width: 54px;
+    height: 54px;
+    background-color: blue;
+    border-radius: 50%;
+    animation: orbit-earth 8s linear infinite;
+  }
+  
+  @keyframes orbit-venuse {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(230px);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(230px);
+    }
+  }
+  
+  @keyframes orbit-mars {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(150px);
+    }
+  }
+  
+  @keyframes orbit-earth {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(300px);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(300px);
+    }
+  }
